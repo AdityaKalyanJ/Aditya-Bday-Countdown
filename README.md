@@ -1,6 +1,6 @@
 # Aditya's Birthday Bash
 
-A one-page invitation for Aditya's birthday party: Saturday, 17 October 2026, 6:00 PM at Vertex Bougainvillea, Villa No. 50.
+A one-page invitation for Aditya's birthday party: Saturday, 17 October 2026, 4:00 PM at Vertex Bougainvillea, Villa No. 50.
 
 Live at https://adityainvite.netlify.app/
 
