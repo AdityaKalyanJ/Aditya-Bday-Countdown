@@ -40,8 +40,16 @@
 			clearInterval(timer);
 			el.hidden = true;
 			done.hidden = false;
+			celebrate();
 		}
 	}
+
+	function celebrate() {
+		if (window.launchConfetti) window.launchConfetti();
+	}
+
+	// Tap the "It's party time!" message for another round of confetti
+	done.addEventListener('click', celebrate);
 
 	update();
 	timer = setInterval(update, 1000);
