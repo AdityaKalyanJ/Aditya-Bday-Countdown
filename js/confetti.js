@@ -3,7 +3,7 @@
 (function () {
 	'use strict';
 
-	var colors = ['#ff6b81', '#ffd166', '#06d6a0', '#4cc9f0', '#f72585', '#ffffff'];
+	var colors = ['#ffd479', '#fff6d5', '#8b7bff', '#7dd3fc', '#ff6fb5', '#ffffff'];
 	var canvas, ctx, pieces = [], running = false;
 
 	function setup() {
@@ -39,9 +39,22 @@
 				rot: Math.random() * Math.PI,
 				vr: (Math.random() - 0.5) * 0.3,
 				color: colors[i % colors.length],
+				star: i % 3 === 0,
 				life: 0
 			});
 		}
+	}
+
+	// Four-pointed twinkle star centred on the origin
+	function sparkle(r) {
+		ctx.beginPath();
+		for (var k = 0; k < 8; k++) {
+			var len = k % 2 === 0 ? r : r * 0.3;
+			var a = k * Math.PI / 4;
+			ctx.lineTo(Math.cos(a) * len, Math.sin(a) * len);
+		}
+		ctx.closePath();
+		ctx.fill();
 	}
 
 	function frame() {
@@ -57,7 +70,11 @@
 			ctx.translate(p.x, p.y);
 			ctx.rotate(p.rot);
 			ctx.fillStyle = p.color;
-			ctx.fillRect(-p.size / 2, -p.size / 4, p.size, p.size / 2);
+			if (p.star) {
+				sparkle(p.size * 0.7);
+			} else {
+				ctx.fillRect(-p.size / 2, -p.size / 4, p.size, p.size / 2);
+			}
 			ctx.restore();
 			return p.y < window.innerHeight + 20 && p.life < 400;
 		});
