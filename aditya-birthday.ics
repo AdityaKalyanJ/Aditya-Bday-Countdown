@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Aditya Birthday Invitation//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:aditya-birthday-2026@adityainvite.netlify.app
+DTSTAMP:20261014T000000Z
+DTSTART:20261017T123000Z
+DTEND:20261017T163000Z
+SUMMARY:Aditya's Birthday Bash
+DESCRIPTION:Cake\, music and celebration with Aditya! https://adityainvite.netlify.app/
+LOCATION:Vertex Bougainvillea\, Villa No. 50
+URL:https://adityainvite.netlify.app/
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Aditya's Birthday Bash starts in 2 hours
+END:VALARM
+END:VEVENT
+END:VCALENDAR
