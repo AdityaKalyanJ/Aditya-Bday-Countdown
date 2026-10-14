@@ -10,7 +10,7 @@ DTSTART:20261017T103000Z
 DTEND:20261017T163000Z
 SUMMARY:Aditya's Birthday Bash
 DESCRIPTION:Cake\, music and celebration with Aditya! https://adityainvite.netlify.app/
-LOCATION:Vertex Bougainvillea\, Villa No. 50
+LOCATION:Villa 50\, Vertex Bougainvillea
 URL:https://adityainvite.netlify.app/
 BEGIN:VALARM
 TRIGGER:-PT2H
